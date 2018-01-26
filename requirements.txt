@@ -1,1 +1,11 @@
+certifi==2018.1.18
+chardet==3.0.4
 click==6.7
+-e git+git@github.com:Tipuch/dirgen.git@a26bb3a57cf5f83e47caf93aead4757dd698ad72#egg=dirgen
+idna==2.6
+pkginfo==1.4.1
+requests==2.18.4
+requests-toolbelt==0.8.0
+tqdm==4.19.5
+twine==1.9.1
+urllib3==1.22

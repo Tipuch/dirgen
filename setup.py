@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='dirgen',
-    version='0.2',
-    py_modules=['yourscript'],
+    version='0.3',
+    py_modules=['dirgen'],
     license="MIT",
     install_requires=[
         'Click',

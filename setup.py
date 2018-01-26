@@ -13,4 +13,6 @@ setup(
         [console_scripts]
         dirgen=__init__:generate_directories
     ''',
+    author="Jean-Paul Fiorini",
+    maintainer="Jean-Paul Fiorini"
 )

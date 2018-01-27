@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dirgen',
-    version='0.3',
+    version='0.4',
     py_modules=['dirgen'],
     license="MIT",
     install_requires=[

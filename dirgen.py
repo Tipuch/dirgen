@@ -1,7 +1,6 @@
 import click
 import json
 import os
-from operator import itemgetter
 
 
 @click.command()
@@ -22,19 +21,19 @@ def generate_directories(template, root_path):
 
 def create_tree(tree, path, options, prefix=''):
     if "prefix" in tree:
-        dir_name = "{}_{}".format(tree['prefix'], tree['name'])
+        dir_name = "%s_%s" % (tree['prefix'], tree['name'])
     elif prefix:
-        dir_name = "{}_{}".format(prefix, tree['name'])
+        dir_name = "%s_%s" % (prefix, tree['name'])
     else:
         dir_name = tree["name"]
     dir_path = os.path.join(path, dir_name)
-    os.makedirs(dir_path, exist_ok=True)
+    os.makedirs(dir_path)
 
     if "children" in tree:
         children = [tree for tree in tree['children'] if
                     ("option" in tree and tree["option"] in options) or "option" not in tree]
-        for counter, child in enumerate(sorted(children, key=itemgetter('weight'))):
-            create_tree(child, dir_path, options, "{:02d}".format(counter))
+        for counter, child in enumerate(sorted(children, key=lambda k: k['weight'])):
+            create_tree(child, dir_path, options, "%02d" % (counter,))
 
 
 def fetch_options(tree, path, options):

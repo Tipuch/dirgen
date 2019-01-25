@@ -4,7 +4,7 @@ click==6.7
 -e git+git@github.com:Tipuch/dirgen.git@1f735c26d9a89b263232601cbf09b69e82f72c10#egg=dirgen
 idna==2.6
 pkginfo==1.4.1
-requests==2.18.4
+requests==2.21.0
 requests-toolbelt==0.8.0
 tqdm==4.19.5
 twine==1.9.1
